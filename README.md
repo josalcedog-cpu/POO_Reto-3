@@ -22,44 +22,45 @@ Este es un restaurante planteado como una *FONDA*, un restaurante familiar bása
 <br>
 Para eso formulé la siguiente lógica: 
 
-'''mermaid
+
+```mermaid
 ---
 config:
-  layout: elk
+layout: elk
 title: La Fonda Chill
 ---
 classDiagram
 direction TB
-    class Cliente {
-	    + String nombre
-	    + String n_mesa
-    }
+class Cliente {
++ String nombre
++ String n_mesa
+}
 
-    class Menuitem {
-	    + String name
-	    + float price
-	    + total()
-    }
+class Menuitem {
++ String name
++ float price
++ total()
+}
 
-    class Bebida {
-	    + int size
-    }
+class Bebida {
++ int size
+}
 
-    class Entrada {
-	    +es_adicion()
-    }
+class Entrada {
++es_adicion()
+}
 
-    class Plato_principal {
-    }
+class Plato_principal {
+}
 
-    class Pedido {
-	    + agregar()
-	    + hay_descuento()
-    }
+class Pedido {
++ agregar()
++ hay_descuento()
+}
 
-    Bebida --|> Menuitem
-    Entrada --|> Menuitem
-    Plato_principal --|> Menuitem
-    Pedido *-- Menuitem
-    Cliente -- Menuitem
-'''
+Bebida --|> Menuitem
+Entrada --|> Menuitem
+Plato_principal --|> Menuitem
+Pedido *-- Menuitem
+Cliente -- Menuitem
+```
